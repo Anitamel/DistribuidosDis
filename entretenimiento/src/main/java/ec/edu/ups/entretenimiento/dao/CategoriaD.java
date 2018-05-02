@@ -17,11 +17,11 @@ public class CategoriaD  implements Serializable{
 	
 	//Creacion DE METODOS BASICOS
 	
-	public void insertar(Categoria catInsert) {
-		em.persist(catInsert);
+	public void insertar(Categoria categoria) {
+		em.persist(categoria);
 	}
-	public void actualizar (Categoria catAct) {
-		em.merge(catAct);
+	public void actualizar (Categoria categoria) {
+		em.merge(categoria);
 	}
 	//Metodo Eliminar 
 	public void eliminar (int codigoE) {

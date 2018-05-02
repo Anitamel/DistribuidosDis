@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+
+	<ui:define name="Titulo"> Lugares</ui:define>
+
+	<h:form>
+	       <h:outputLabel value="Ingrese Nombre" />
+	       <h:inputText value="#{lugarC.lugar.nombre}" />
+	       <h:outputLabel value="Ingre telefono" />
+	       <h:inputText value="#{lugarC.lugar.telefono}" />
+	       
+		 <h:commandButton action="#{lugarC.guardar()}" value="GUARDAR" />
+	</h:form>
+
+</html>

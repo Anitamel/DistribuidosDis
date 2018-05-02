@@ -20,7 +20,7 @@ public class MusicaC implements Serializable{
 	
 	@Inject
 	private  MusicaD musiDao;
-	private Musica musiModel=null;
+	private Musica musica=null;
 	
 	
 	//LIsta de musica
@@ -34,13 +34,13 @@ public class MusicaC implements Serializable{
 	
 	@PostConstruct
 	public void init() {
-		musiModel = new Musica();
+		musica = new Musica();
 	}
 	public  Musica getMusica() {
-		return musiModel;
+		return musica;
 	}
 	public void setMusica(Musica musiSet) {
-		this.musiModel=musiSet;
+		this.musica=musiSet;
 	}
 	public int getId() {
 		return id;
@@ -54,5 +54,37 @@ public class MusicaC implements Serializable{
 		
 	}
 	
+	/////////
+	 public void setmusica(List<Musica> listMusica) {
+		   this.listMusica=listMusica;
+		 }
+		 public void loadMusica() {
+		  // listLugares=lugaDao.listLugares();
+		 }
+		 public  String loadEditarDatos(int id) {
+		   return "";
+		 }
+		 public String eliminarMusica(MusicaD musica) {
+		   try {
+		     if (this.id!=0) {
+		       
+		     }else
+		       musiDao.eliminar(id);
+		       
+		   }catch(Exception e) {
+		     
+		   }
+		   return null;
+		 }
+		 //METOD PARA GUARDAR LUGAR 
+		 public String guardar() {
+		    System.out.println("GUARDAR <<<<>>>>> "+musica);
+		   musiDao.guardar(musica);
+		   return "";
+		 }
+		 public String editarMusica() {
+		   musiDao.actualizar(musica);
+		   return "";
+		 }
 
 }

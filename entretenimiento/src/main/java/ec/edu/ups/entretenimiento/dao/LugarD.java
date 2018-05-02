@@ -9,21 +9,21 @@ import javax.persistence.EntityManager;
 import ec.edu.ups.entretenimiento.model.Lugar;
 
 @Stateless
-public class LugarD implements Serializable {
+public class LugarD  {
 	
-	private static final long serialVersionUID=1L;
+
 	
 	@Inject
 	private EntityManager em;
 	
 	//CREACION DE METODOS BASICOS
 	
-	public void insertat (Lugar lugaInt) {
-		em.persist(lugaInt);
+	public void insertat (Lugar lugar) {
+		em.persist(lugar);
 		
 	}
-	public void actualizar (Lugar lugaAct) {
-		em.merge(lugaAct);
+	public void actualizar (Lugar lugar) {
+		em.merge(lugar);
 	}
 	
 	public void eliminar (int codigo) {
@@ -38,8 +38,8 @@ public class LugarD implements Serializable {
 	}
 	
 	//Metod guardad 
-	public void guardar (Lugar lugGuard) {
-		insertat(lugGuard);
+	public void guardar (Lugar lugar) {
+		em.persist(lugar);
 		
 	}
 

@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<ui:define name="Titulo"> Ubicacion</ui:define>
+
+	<h:form>
+	       <h:outputLabel value="Ingrese Calle Primaria" />
+	       <h:inputText value="#{ubicacionC.ubicacion.calle_primaria}" />
+	       <h:outputLabel value="Ingre calle Secundaria" />
+	       <h:inputText value="#{ubicacion.ubicacion.calle_secundaria}" />
+	        <h:outputLabel value="Ingre Numero Local" />
+	       <h:inputText value="#{ubicacion.ubicacion.numero_local}" />
+	        <h:outputLabel value="Ingre Descripcion" />
+	       <h:inputText value="#{ubicacion.ubicacion.descripcion}" />
+		 <h:commandButton action="#{ubicacionC.guardar()}" value="GUARDAR" />
+	</h:form>
+</html>
